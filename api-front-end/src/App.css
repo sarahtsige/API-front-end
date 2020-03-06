@@ -2,10 +2,13 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.countryContainer {
+  display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-gap: 10px;
 }
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -24,10 +27,7 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
+.
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

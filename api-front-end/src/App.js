@@ -1,27 +1,22 @@
-import React from 'react';
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import { Route, Link } from "react-router-dom";
-import './App.css';
-import Countries from "./components/countries"
-
+import "./App.css";
+import Countries from "./components/countries";
 
 function App() {
   return (
     <div className="App">
       <nav>
-          <Link to="/"> 
-          <h1>NCountry List</h1>
-          </Link>
+        <h1>Countries</h1>
       </nav>
       <main>
-
-        <Countries />
-
+        
+          <Countries />
+      
         <footer>
-          <h3>US COuntry Data</h3>
-          <img src="" alt=""></img>
+       <h3>Country Data</h3>
         </footer>
-        </main>
+      </main>
     </div>
   );
 }
