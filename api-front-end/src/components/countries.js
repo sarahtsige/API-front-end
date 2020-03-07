@@ -31,7 +31,7 @@ class Countries extends Component {
     let countries = this.state.data.map(item => {
       return (
         <div className="country" key={item.id}>
-          <Card style={{ width: "12rem" }}>
+          <Card style={{ width: "16rem" }}>
             <Card.Img variant="top" src={item.flag} />
             <Card.Body>
               <Card.Title>{item.name}</Card.Title>
