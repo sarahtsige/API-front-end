@@ -5,6 +5,7 @@ import Countries from "./components/Countries";
 import Header from "./components/Header";
 import CountryDetails from "./components/CountryDetails";
 import Home from "./components/Home";
+import Regions from "./components/Regions";
 
 class App extends Component {
 
@@ -26,6 +27,7 @@ class App extends Component {
         <main>
           <Route path="/" component={Home} />
           <Route path="/countries" component={Countries} />
+          <Route path="/regions" component={Regions} />
           <Route
             path="/country-details/:name"
             render={routerProps => <CountryDetails setCountryDetails={this.setCountryDetails} {...routerProps} {...this.state} />}

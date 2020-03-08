@@ -14,7 +14,7 @@ class Header extends Component {
         <Nav className="mr-auto">
           <NavLink href="home">Home</NavLink>
           <NavLink href="countries">Countries</NavLink>
-         
+          <NavLink href="regions">Regions</NavLink>
         </Nav>
       </Navbar>
     );
