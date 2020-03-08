@@ -7,6 +7,16 @@ import CountryDetails from "./components/CountryDetails";
 import Home from "./components/Home";
 
 class App extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = { details: {} };
+  }
+  
+  setCountryDetails = (details) => {
+    this.setState({ details: details });
+  }
+
   render() {
     return (
       <div>
@@ -18,7 +28,7 @@ class App extends Component {
           <Route path="/countries" component={Countries} />
           <Route
             path="/country-details/:name"
-            render={routerProps => <CountryDetails {...routerProps} />}
+            render={routerProps => <CountryDetails setCountryDetails={this.setCountryDetails} {...routerProps} {...this.state} />}
           />
         </main>
       </div>
