@@ -30,33 +30,22 @@ class Countries extends Component {
     console.log(this.state.data);
     let countries = this.state.data.map(item => {
       return (
-        <div className="country" key={item.id}>
+        <div className="country" key={item.name}>
           <Card style={{ width: "16rem" }}>
             <Card.Img variant="top" src={item.flag} />
             <Card.Body>
               <Card.Title>{item.name}</Card.Title>
               <Card.Text>Capital: {item.capital}</Card.Text>
-              <Button variant="primary">Country Info</Button>
+              <Link to={"country-details/"+item.name}>
+                <Button variant="primary">Country Info</Button>
+              </Link>
             </Card.Body>
           </Card>
         </div>
       );
     });
-    return <div className='countryContainer' >{countries}</div>;
+    return <div className="countryContainer">{countries}</div>;
   }
 }
-
-//     render() {
-//       let countries = countryList.map(item => {
-
-//         return (
-//           <div className="countriesdiv" >
-//               <h3>Country Name: </h3>
-//               <p> Capital: </p>
-//           </div>
-//         );
-//       };
-//     }
-//   }
 
 export default Countries;

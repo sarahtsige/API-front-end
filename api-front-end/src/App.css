@@ -2,6 +2,9 @@
   text-align: center;
 }
 
+nav {
+  margin-bottom: 40px;
+}
 .countryContainer {
   display: grid;
     grid-template-columns: repeat(5, 1fr);
