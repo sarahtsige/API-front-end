@@ -1,10 +1,8 @@
 import React, { Component } from "react";
-import Button from "react-bootstrap/Button";
 import Navbar from "react-bootstrap/Navbar";
-import NavLink from "react-bootstrap/NavLink";
 import Nav from "react-bootstrap/Nav";
-import Form from "react-bootstrap/Form";
-import FormControl from "react-bootstrap/FormControl";
+import { Link } from "react-router-dom";
+import Button from "react-bootstrap/Button";
 
 class Header extends Component {
   render() {
@@ -12,9 +10,18 @@ class Header extends Component {
       <Navbar bg="primary" variant="dark">
         <Navbar.Brand href="#home">Navbar</Navbar.Brand>
         <Nav className="mr-auto">
-          <NavLink href="home">Home</NavLink>
-          <NavLink href="countries">Countries</NavLink>
-          <NavLink href="regions">Regions</NavLink>
+          <Link to="/home">
+            <Button>Home</Button>
+          </Link>
+          <Link to="/countries">
+            <Button>Countries</Button>
+          </Link>
+          <Link to="/regions">
+            <Button>Regions</Button>
+          </Link>
+          <Link to="/create">
+            <Button>Create</Button>
+          </Link>
         </Nav>
       </Navbar>
     );

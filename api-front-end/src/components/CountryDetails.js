@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import PropTypes from 'prop-types';
-import { Route, Link } from "react-router-dom";
+import PropTypes from "prop-types";
 import Card from "react-bootstrap/Card";
 
 // import axios from "axios";
@@ -28,19 +27,22 @@ class CountryDetails extends Component {
       });
   }
 
-  displayAsylum = (asylum) => {
-    return asylum && asylum.map(item => {
-      return (
-        <div className="asylum">
-          <p> Origin: {item.Origin}</p>
-          <p>
-            Country of Asylum or Residence: {item.CountryOfAsylumOrResidence}
-          </p>
-          <p> Year: {item.year}</p>
-          <p> Total: {item.total}</p>
-        </div>
-      );
-    });
+  displayAsylum = asylum => {
+    return (
+      asylum &&
+      asylum.map(item => {
+        return (
+          <div className="asylum">
+            <p> Origin: {item.Origin}</p>
+            <p>
+              Country of Asylum or Residence: {item.CountryOfAsylumOrResidence}
+            </p>
+            <p> Year: {item.year}</p>
+            <p> Total: {item.total}</p>
+          </div>
+        );
+      })
+    );
   };
 
   render() {
@@ -61,12 +63,12 @@ class CountryDetails extends Component {
           <Card.Header as="h5">{name}</Card.Header>
           <Card.Body>
             <Card.Title>Special title treatment</Card.Title>
-              <p>Capital City: {capital}</p>
-              <p>Region: {region}</p>
-              <p>Population: {population}</p>
-              <p>Demonym: {demonym}</p>
-              <p>Flag: </p>
-              <img src={flag} />
+            <p>Capital City: {capital}</p>
+            <p>Region: {region}</p>
+            <p>Population: {population}</p>
+            <p>Demonym: {demonym}</p>
+            <p>Flag: </p>
+            <img src={flag} alt="flag"/>
           </Card.Body>
         </Card>
         {asylumInfo}

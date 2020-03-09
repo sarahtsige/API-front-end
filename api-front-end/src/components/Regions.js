@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route, Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import DropdownButton from "react-bootstrap/DropdownButton";
@@ -16,28 +16,19 @@ class Regions extends Component {
     };
   }
 
-  getRegionData = (e) => {
+  getRegionData = e => {
     let regionName = e.target.id;
-    let regionUrl = `${Url}${regionName}`
+    let regionUrl = `${Url}${regionName}`;
     fetch(regionUrl)
-    .then(response => {
-      console.log(response);
-      return response.json();
-    })
-    .then(data => {
-      console.log(data);
-      this.setState({ data: data });
-    });
+      .then(response => {
+        console.log(response);
+        return response.json();
+      })
+      .then(data => {
+        console.log(data);
+        this.setState({ data: data });
+      });
   };
-
-
-
-
-  // componentDidMount() {
-  // }
-
-
-
 
   render() {
     console.log(this.state.data);
@@ -58,18 +49,34 @@ class Regions extends Component {
       );
     });
     return (
-        <div>
-        <DropdownButton id="dropdown-basic-button" onClick={this.getRegionData}title="Regions">
-        <Dropdown.Item id="Africa" href="#/action-1">Africa</Dropdown.Item>
-        <Dropdown.Item id="Americas" href="#/action-2">Americas</Dropdown.Item>
-        <Dropdown.Item id="Asia" href="#/action-3">Asia</Dropdown.Item>
-        <Dropdown.Item id="Europe" href="#/action-4">Europe</Dropdown.Item>
-        <Dropdown.Item id="Oceania" href="#/action-5">Oceania</Dropdown.Item>
-        <Dropdown.Item id="Polar" href="#/action-6">Polar</Dropdown.Item>
-      </DropdownButton>
-      <div className="countryContainer">{countries}</div>
+      <div>
+        <DropdownButton
+          id="dropdown-basic-button"
+          onClick={this.getRegionData}
+          title="Regions"
+        >
+          <Dropdown.Item id="Africa" href="#/action-1">
+            Africa
+          </Dropdown.Item>
+          <Dropdown.Item id="Americas" href="#/action-2">
+            Americas
+          </Dropdown.Item>
+          <Dropdown.Item id="Asia" href="#/action-3">
+            Asia
+          </Dropdown.Item>
+          <Dropdown.Item id="Europe" href="#/action-4">
+            Europe
+          </Dropdown.Item>
+          <Dropdown.Item id="Oceania" href="#/action-5">
+            Oceania
+          </Dropdown.Item>
+          <Dropdown.Item id="Polar" href="#/action-6">
+            Polar
+          </Dropdown.Item>
+        </DropdownButton>
+        <div className="countryContainer">{countries}</div>
       </div>
-    )    
+    );
   }
 }
 

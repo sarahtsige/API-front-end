@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 
@@ -36,7 +36,7 @@ class Countries extends Component {
             <Card.Body>
               <Card.Title>{item.name}</Card.Title>
               <Card.Text>Capital: {item.capital}</Card.Text>
-              <Link to={"country-details/"+item.name}>
+              <Link to={"country-details/" + item.name}>
                 <Button variant="primary">Country Info</Button>
               </Link>
             </Card.Body>
