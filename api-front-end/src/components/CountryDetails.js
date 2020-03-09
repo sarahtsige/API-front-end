@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import Card from "react-bootstrap/Card";
+import getCountryAPI from '../util';
 
 // import axios from "axios";
 import "./Countries";
 
-let countryUrl = "http://localhost:4000/name/";
-let countryUrl2 = "https://api-projectssaleh.herokuapp.com/name/";
+let countryUrl = `${getCountryAPI()}name/`;
+
 
 class CountryDetails extends Component {
   constructor(props) {
@@ -60,10 +61,9 @@ class CountryDetails extends Component {
     return (
       <div>
         <Card>
-          <Card.Header as="h5">{name}</Card.Header>
+          <Card.Header as="h4">{name}</Card.Header>
           <Card.Body>
-            <Card.Title>Special title treatment</Card.Title>
-            <p>Capital City: {capital}</p>
+            <Card.Title>Capital City: {capital}</Card.Title>
             <p>Region: {region}</p>
             <p>Population: {population}</p>
             <p>Demonym: {demonym}</p>
@@ -71,7 +71,9 @@ class CountryDetails extends Component {
             <img src={flag} alt="flag"/>
           </Card.Body>
         </Card>
+        <div>
         {asylumInfo}
+        </div>
       </div>
     );
   }

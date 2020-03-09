@@ -8,7 +8,7 @@ class Header extends Component {
   render() {
     return (
       <Navbar bg="primary" variant="dark">
-        <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+        <Navbar.Brand href="#home">Country API</Navbar.Brand>
         <Nav className="mr-auto">
           <Link to="/home">
             <Button>Home</Button>

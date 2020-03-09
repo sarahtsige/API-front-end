@@ -8,9 +8,9 @@
 
 .countryContainer {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(6, 1fr);
-  grid-gap: 10px;
+  grid-gap: 15px;
   background-color: #e9ecef;
   padding-top: 30px;
 }
@@ -35,6 +35,21 @@
 .countryForm{
  padding: 50px 300px 0px 300px;
 }
+
+ .flag{
+width:286px;
+height: 166px;
+background-size: cover;
+background-position: center;
+}
+
+/* .cardTitle{
+font-size: 18px;
+}
+
+.cardText{
+
+} */
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

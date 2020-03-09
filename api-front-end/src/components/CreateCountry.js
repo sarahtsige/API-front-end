@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-const axios = require("axios");
+import getCountryAPI from "../util";
+import axios from "axios";
+
 
 class CreateCountry extends Component {
   constructor(props) {
@@ -25,11 +27,9 @@ class CreateCountry extends Component {
 
   submitHandler = e => {
     e.preventDefault();
-    let Url = "http://localhost:4000/";
-    let Url2 = "https://api-projectssaleh.herokuapp.com/";
     console.log(this.state);
     axios
-      .post(Url, {
+      .post(getCountryAPI(), {
         name: this.state.name,
         capital: this.state.capital,
         region: this.state.region,

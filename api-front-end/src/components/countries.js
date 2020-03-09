@@ -2,9 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-
-let Url = "http://localhost:4000/";
-let Url2 = "https://api-projectssaleh.herokuapp.com/";
+import getCountryAPI from '../util';
 
 class Countries extends Component {
   constructor(props) {
@@ -15,29 +13,26 @@ class Countries extends Component {
   }
 
   componentDidMount() {
-    fetch(Url)
+    fetch(getCountryAPI())
       .then(response => {
-        console.log(response);
         return response.json();
       })
       .then(data => {
-        console.log(data);
         this.setState({ data: data });
       });
   }
 
   render() {
-    console.log(this.state.data);
     let countries = this.state.data.map(item => {
       return (
-        <div className="country" key={item.name}>
-          <Card style={{ width: "16rem" }}>
-            <Card.Img variant="top" src={item.flag} />
+        <div className="country" key={item.id}>
+          <Card style={{ width: "18rem" }} >
+            <div className="flag"  style={{ backgroundImage: `url(${item.flag})`}}></div>
             <Card.Body>
-              <Card.Title>{item.name}</Card.Title>
-              <Card.Text>Capital: {item.capital}</Card.Text>
+              <Card.Title className="cardTitle">{item.name}</Card.Title>
+              <Card.Text className="cardText" >Capital: {item.capital}</Card.Text>
               <Link to={"country-details/" + item.name}>
-                <Button variant="primary">Country Info</Button>
+                <Button className="countryInfoButton" variant="primary">Country Info</Button>
               </Link>
             </Card.Body>
           </Card>
