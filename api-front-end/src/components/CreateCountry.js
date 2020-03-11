@@ -92,11 +92,11 @@ class CreateCountry extends Component {
         </Form.Group>
 
         <Form.Group controlId="demonym">
-          <Form.Label>Domonym</Form.Label>
+          <Form.Label>Demonym</Form.Label>
           <Form.Control
             type="text"
             name="demonym"
-            placeholder="Domonym"
+            placeholder="Demonym"
             value={this.state.demonym}
             onChange={this.onChange}
           />

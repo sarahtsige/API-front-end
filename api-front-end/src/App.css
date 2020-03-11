@@ -43,6 +43,18 @@ background-size: cover;
 background-position: center;
 }
 
+.asylum{
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: 5px;
+}
+
+.asylumInfo{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-gap: 10px;
+}
+
 /* .cardTitle{
 font-size: 18px;
 }

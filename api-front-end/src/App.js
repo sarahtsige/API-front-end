@@ -25,7 +25,7 @@ class App extends Component {
           <Header />
         </nav>
         <main>
-          <Route exact path="/home" component={Home} />
+          <Route exact path="/" component={Home} />
           <Route path="/countries" component={Countries} />
           <Route path="/regions" component={Regions} />
           <Route path="/create" component={CreateCountry} />

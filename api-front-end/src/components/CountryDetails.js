@@ -30,7 +30,7 @@ class CountryDetails extends Component {
 
   displayAsylum = asylum => {
     return (
-      asylum &&
+      // asylum &&
       asylum.map(item => {
         return (
           <div className="asylum">
@@ -71,7 +71,8 @@ class CountryDetails extends Component {
             <img src={flag} alt="flag"/>
           </Card.Body>
         </Card>
-        <div>
+        <h3>Asylum Information:</h3>
+        <div className="asylumInfo">
         {asylumInfo}
         </div>
       </div>
