@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route} from "react-router-dom";
+import { Route } from "react-router-dom";
 import "./App.css";
 import Countries from "./components/Countries";
 import Header from "./components/Header";
@@ -26,6 +26,7 @@ class App extends Component {
         </nav>
         <main>
           <Route exact path="/" component={Home} />
+          <Route exact path="/home" component={Home} />
           <Route path="/countries" component={Countries} />
           <Route path="/regions" component={Regions} />
           <Route path="/create" component={CreateCountry} />

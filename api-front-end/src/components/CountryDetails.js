@@ -30,7 +30,7 @@ class CountryDetails extends Component {
 
   displayAsylum = asylum => {
     return (
-      // asylum &&
+      asylum &&
       asylum.map(item => {
         return (
           <div className="asylum">
