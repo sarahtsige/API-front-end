@@ -17,6 +17,11 @@ From the landing page of the site, there are links in the navigation bar to view
 ## Deployed Site Link
 
 Link to depoyed site:  https://laughing-kepler-ed8726.netlify.com/
+Link to API: https://api-projectssaleh.herokuapp.com/
+
+
+## Future Updates
+In the future, code will be refactored.   Full CRUD functionality will be added.
 
 
 ## Author

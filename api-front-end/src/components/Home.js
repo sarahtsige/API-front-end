@@ -8,7 +8,7 @@ function Home(props) {
     <Jumbotron className="jumbotron">
       <h1 className="homeTitle">Country API</h1>
       <p className="homeText">
-        To view country data, click on of the links above or click below to see
+        To view country data, click one of the links above or click below to see
         all countries.
       </p>
       <p>
